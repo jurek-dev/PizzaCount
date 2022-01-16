@@ -17,6 +17,8 @@ html, body {
     text-align: center;
     background-color: #212529;
     color: white;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
 }
 
 .small-logo {
@@ -63,11 +65,16 @@ h1, h2, p, label {
 
 .addButton {
     margin-top: 1em;
-    width: 4em;
-    height: 4em;
+    width: 8em;
+    height: 5em;
     background: #4aafd1;
     border: none;
     color: white;
+}
+
+input:checked + label {
+    text-decoration: line-through;
+    color: lightgray;
 }
 
 main {
@@ -77,4 +84,10 @@ main {
 
 header, main, footer {
     flex-shrink: 0;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
