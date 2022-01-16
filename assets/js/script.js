@@ -5,8 +5,14 @@ const TaskList = document.getElementById("tasks"); // TaskList recebe o ID da DI
 form.onsubmit = function (e) {
     e.preventDefault();
     const inputField = document.getElementById('task-input');
-    addTask(inputField.value);
-    form.reset();
+
+    if(inputField.value.length == 0) {
+        alert("A tarefa digitada não é uma tarefa!");
+    }
+    else {
+        addTask(inputField.value);
+        form.reset();
+    }
 };
 
 function addTask(description) {

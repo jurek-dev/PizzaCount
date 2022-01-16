@@ -10,15 +10,26 @@
 <body>
     <section id="interface">
         <header>
-            <h1>To-do List</h1>
+            <section class="header">
+                <div class="header-item">
+                    <img class="small-logo" src="assets/img/logo_todo.png" alt="">
+                    <p>To-do List</p>
+                </div>
+            </section>
         </header>
         <main>
-            <form id="task-form">
-                <input id="task-input" name="tarefa" type="text" placeholder="Digite aqui sua tarefa"/>
-                <button type="submit">Adicionar</button>
-            </form>
+            <section class="container-form">
+                <form id="task-form">
+                    <p>Tarefa:</p>
+                    <input id="task-input" name="tarefa" type="text" placeholder="Digite aqui sua tarefa"/>
+                    <div class="button-div">
+                        <button class="addButton" type="submit">Adicionar</button>
+                    </div>
+                </form>
+            </section>
 
             <div id="container">
+                <p>Minha lista de afazeres:</p>
                 <div id="tasks"></div>
             </div>
         </main>
