@@ -24,7 +24,7 @@ html, body {
     height: 50px;
 }
 
-h1, h2, p {
+h1, h2, p, label {
     font-family: 'Oswald', sans-serif;
 }
 
@@ -52,7 +52,7 @@ h1, h2, p {
 
 #task-input {
     width: 20em;
-    height: 2em;
+    height: 3em;
 }
 
 #task-form {
@@ -63,8 +63,11 @@ h1, h2, p {
 
 .addButton {
     margin-top: 1em;
-    width: 10em;
-    height: 2em;
+    width: 4em;
+    height: 4em;
+    background: #4aafd1;
+    border: none;
+    color: white;
 }
 
 main {
