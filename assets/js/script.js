@@ -27,6 +27,7 @@ function addTask(description) {
     newTask.setAttribute('id', description);
 
     taskLabel.setAttribute('for', description);
+    taskLabel.classList.add("labeltask");
     taskLabel.appendChild(taskDescriptionNode);
 
     taskContainer.classList.add('task-item');
