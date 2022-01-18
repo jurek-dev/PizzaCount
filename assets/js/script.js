@@ -1,16 +1,25 @@
 const form = document.getElementById("task-form"); // form recebe o ID do formulário da página
 const TaskList = document.getElementById("tasks"); // TaskList recebe o ID da DIV da página.
 
+var userTasks = [];
+
 // Ao submeter o formulário:
 form.onsubmit = function (e) {
     e.preventDefault();
     const inputField = document.getElementById('task-input');
 
+    for(let indice = 0; indice < userTasks.length; indice++) {
+        if(userTasks[indice] == inputField.value) {
+            return alert("Esta tarefa já está em sua lista!"), form.reset();
+        }
+    }
+
     if(inputField.value.length == 0) {
         alert("A tarefa digitada não é uma tarefa!");
     }
-    else {
+        else {
         addTask(inputField.value);
+        userTasks.push(inputField.value);
         form.reset();
     }
 };
